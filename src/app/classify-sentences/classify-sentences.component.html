@@ -1,1 +1,6 @@
-<p>classify-sentences works!</p>
+<h1>Is this statement positive or normative?</h1>
+
+<h3>{{ cStatements[currentPos].sentence }}</h3>
+
+<button (click)="onSubmit(true)">Positive</button>
+<button (click)="onSubmit(false)">Normative</button>
