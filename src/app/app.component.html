@@ -1,1 +1,14 @@
-<h1>Is this the real life.</h1>
+<h1 id="title">Write some positive and normative statements</h1>
+
+<div id="pagebody">
+  <form (submit)="onSubmit($event)">
+    <input placeholder="Change name" name="query">
+    <button>Submit</button>
+  </form>
+
+  <ul id="sentencesList">
+    @for (statement of statements | async; track statement) {
+      <li id="sentence">{{ statement.sentence }}</li>
+    }
+  </ul>
+</div>
