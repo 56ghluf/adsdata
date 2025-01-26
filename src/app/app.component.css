@@ -1,98 +1,35 @@
-/* General reset for margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Styling for the navigation bar container */
+#navigationbar {
+    background-color: #f4f4f9; /* Light background color */
+    padding: 10px 20px; /* Padding for spacing around the navbar */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Align items vertically */
+    border-radius: 20px; /* Rounded corners for the navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle 3D effect */
+    margin: 20px; /* Margin around the navbar */
   }
   
-  /* Body styles for full-screen centering */
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f9f9f9;
-    color: #333;
-    margin: 0;
+  #navigationbar a {
+    color: #333; /* Dark text color for contrast */
+    text-decoration: none; /* Remove underlines */
+    padding: 10px 20px; /* Add padding inside links */
+    font-size: 16px; /* Font size for the links */
+    border-radius: 10px; /* Rounded edges for the links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions for hover effects */
+    margin: 0 15px; /* Space out the links */
   }
   
-  /* Title styling */
-  #title {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 1rem;
-    color: #222;
+  #navigationbar a:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: white; /* Change text color to white on hover */
   }
   
-  /* Center the page body content */
-  #pagebody {
-    width: 90%;
-    max-width: 600px;
-    background: #fff;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-left: auto;
-    margin-right: auto;
+  #navigationbar a:focus {
+    outline: none; /* Remove focus outline */
   }
   
-  /* Form styles */
-  form {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  input {
-    flex: 1;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    outline: none;
-    transition: border-color 0.3s;
-  }
-  
-  input:focus {
-    border-color: #007BFF;
-  }
-  
-  button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* List styles */
-  #sentencesList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-  
-  #sentencesList li {
-    padding: 0.75rem;
-    margin-bottom: 0.5rem;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  
-  #sentencesList li:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  #navigationbar a:active {
+    background-color: #0056b3; /* Darker blue background when the link is clicked */
+    color: white; /* Keep text color white when clicked */
   }

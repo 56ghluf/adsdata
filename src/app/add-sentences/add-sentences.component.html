@@ -1,0 +1,12 @@
+<h1>Enter positive or nomative statements!</h1>
+
+<form (submit)="onSubmit($event)">
+    <input paceholder="Sentence..." name="query">
+    <button>Submit</button>
+</form>
+
+<ul>
+    @for (statement of statements | async; track statement) {
+        <li>{{ statement.sentence }}</li>
+    }
+</ul>
