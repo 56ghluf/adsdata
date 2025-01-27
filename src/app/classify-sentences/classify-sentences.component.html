@@ -1,6 +1,10 @@
 <h1>Is this statement positive or normative?</h1>
 
-<h3>{{ cStatements[currentPos].sentence }}</h3>
+@if (cStatements.length > 0) {
+    <h3>{{ cStatements[currentPos].sentence }}</h3>
 
-<button (click)="onSubmit(true)">Positive</button>
-<button (click)="onSubmit(false)">Normative</button>
+    <button (click)="onSubmit(true)">Positive</button>
+    <button (click)="onSubmit(false)">Normative</button>
+} @else {
+    <h3>No more sentences to classify!</h3>
+}
