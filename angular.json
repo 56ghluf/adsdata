@@ -22,8 +22,9 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
-                "glob": "**/*",
-                "input": "public"
+                "glob": "_redirects",
+                "input": "src",
+                "output": "/"
               }
             ],
             "styles": [
@@ -95,12 +96,5 @@
         }
       }
     }
-  },
-  "prerender": {
-    "builder": "@nguniversal/builders:prerender",
-    "options": {
-      "routes": ["/", "addsentences", "classify"]
-    },
-    "defaultConfiguration": "production"
   }
 }
