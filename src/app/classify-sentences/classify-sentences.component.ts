@@ -56,6 +56,7 @@ export class ClassifySentencesComponent {
   }
 
   onSubmit(positive: boolean) {
+    this.currentPos = 0;
     this.alreadySeen.add(this.cStatements[this.currentPos].sentence);
     this.cStatements[this.currentPos].count -= 1
 
