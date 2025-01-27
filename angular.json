@@ -89,8 +89,18 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
+  },
+  "prerender": {
+    "builder": "@nguniversal/builders:prerender",
+    "options": {
+      "routes": ["/", "addsentences", "classify"]
+    },
+    "defaultConfiguration": "production"
   }
 }
