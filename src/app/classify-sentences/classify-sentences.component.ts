@@ -56,9 +56,8 @@ export class ClassifySentencesComponent {
   }
 
   onSubmit(positive: boolean) {
-    this.currentPos = 0;
     this.alreadySeen.add(this.cStatements[this.currentPos].sentence);
-    this.cStatements[this.currentPos].count -= 1
+    this.cStatements[this.currentPos].count -= 1;
 
     let statementRef = doc(this.firestore, "PosVsNorm", this.cStatements[this.currentPos].id as string);
 
@@ -73,12 +72,13 @@ export class ClassifySentencesComponent {
 
         if (this.cStatements[this.currentPos].count <= 0) {
           deleteDoc(statementRef).then(() => {
-            console.log("Deleteed doc.")
+            console.log("Deleted doc.")
           });
         } else {
           setDoc(statementRef, this.cStatements[this.currentPos])
         }
 
+        console.log(this.cStatementResults[i]);
         setDoc(statementResultRef, this.cStatementResults[i])
 
         break;
