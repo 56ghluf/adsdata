@@ -5,8 +5,12 @@
     <button>Submit</button>
 </form>
 
-<ul>
-    @for (statement of statements | async; track statement) {
-        <li>{{ statement.sentence }}</li>
-    }
-</ul>
+@defer {
+    <ul>
+        @for (statement of statements | async; track statement) {
+            <li>{{ statement.sentence }}</li>
+        }
+    </ul>
+} @loading (minimum 400ms) {
+    <p id="loading">Loading sentences...</p>
+}
